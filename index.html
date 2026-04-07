@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Valley Remodel - Founding Member Program</title>
+    <meta name="description" content="Join the first 100 Founding Members. $97/month gets you priority scheduling, annual inspections, and a lifetime remodeling partner.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 100px 20px 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+        
+        .hero h2 {
+            font-size: 1.7rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+        
+        .hero h3 {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+        
+        .hero .supporting-proof {
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+            opacity: 0.85;
+            font-style: italic;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .cta-button:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.6);
+        }
+        
+        .micro-reassurance {
+            margin-top: 20px;
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 20px;
+        }
+        
+        section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        h2.section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2c3e50;
+            line-height: 1.2;
+        }
+        
+        .content-block {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+        
+        .content-block p {
+            margin-bottom: 25px;
+        }
+        
+        .content-block strong {
+            color: #e74c3c;
+            font-weight: 700;
+        }
+        
+        /* Problem List */
+        .problem-list {
+            max-width: 700px;
+            margin: 40px auto;
+            font-size: 1.15rem;
+        }
+        
+        .problem-list li {
+            margin-bottom: 20px;
+            padding-left: 35px;
+            position: relative;
+        }
+        
+        .problem-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .benefit-item {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            border-left: 5px solid #e74c3c;
+        }
+        
+        .benefit-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+        
+        .benefit-item p {
+            font-size: 1.05rem;
+            color: #555;
+        }
+        
+        /* Steps Section */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            margin-top: 50px;
+        }
+        
+        .step {
+            text-align: center;
+        }
+        
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 25px;
+        }
+        
+        .step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .step p {
+            font-size: 1.05rem;
+            color: #555;
+        }
+        
+        /* Checklist */
+        .checklist {
+            max-width: 700px;
+            margin: 40px auto;
+            font-size: 1.15rem;
+        }
+        
+        .checklist li {
+            margin-bottom: 18px;
+            padding-left: 35px;
+            position: relative;
+        }
+        
+        .checklist li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+        
+        /* Testimonial Box */
+        .testimonial {
+            max-width: 750px;
+            margin: 50px auto;
+            padding: 40px;
+            background: white;
+            border-left: 5px solid #e74c3c;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            font-style: italic;
+            font-size: 1.15rem;
+            color: #555;
+        }
+        
+        .testimonial-author {
+            margin-top: 20px;
+            font-style: normal;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        /* Scarcity Badge */
+        .scarcity-badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .final-cta h2 {
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .guarantee {
+            margin-top: 35px;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.3rem;
+            }
+            
+            .hero h3 {
+                font-size: 1.1rem;
+            }
+            
+            h2.section-title {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Your Contractor Won't Call You Back.</h1>
+            <h2>Sun Valley Remodel runs like a membership—not a nightmare.</h2>
+            <h3>So your home stays perfect without the chaos.</h3>
+            <p class="supporting-proof">Priority scheduling. Annual inspections. Lifetime relationship. Not one-off disasters.</p>
+            <a href="https://buy.stripe.com/3cI00c6TE5My1QKfqJ5J601" class="cta-button">Join the Founding Members — $97/mo</a>
+            <p class="micro-reassurance">First 100 only • Locked-in pricing forever • Cancel anytime</p>
+        </div>
+    </section>
+
+    <!-- Opening Scenario -->
+    <section>
+        <div class="container">
+            <div class="content-block">
+                <p><strong>You paid them.</strong></p>
+                <p>They showed up late. Left dust everywhere. Disappeared for three weeks without a word.</p>
+                <p>Now you need something fixed, and they won't even return your calls.</p>
+                <p><strong>Sound familiar?</strong></p>
+                <p>That's not remodeling. That's gambling.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Traditional Contractors Operate on a Broken Model</h2>
+            <ul class="problem-list">
+                <li><strong>One-off projects.</strong> Once they're paid, you're forgotten. Need a touch-up six months later? Good luck getting them to respond.</li>
+                <li><strong>Hidden costs.</strong> The quote was $15K. The final bill? $22K. "Unexpected issues," they said.</li>
+                <li><strong>No accountability.</strong> They're not coming back. Why would they care if the tile cracks or the paint chips?</li>
+                <li><strong>Zero follow-up.</strong> Your $40,000 kitchen remodel is done... and then what? You're on your own.</li>
+            </ul>
+            <div class="content-block" style="text-align: center; margin-top: 50px;">
+                <p><strong>This system was built for contractors, not homeowners.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">We Flipped the Model: Membership-Based Remodeling</h2>
+            <div class="content-block">
+                <p>Instead of one-off chaos, you get a <strong>lifetime relationship.</strong></p>
+            </div>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Founding Member Status</h3>
+                    <p>$97/month gets you priority scheduling, annual inspections, exclusive discounts, and direct access to project managers.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Transparent Execution</h3>
+                    <p>Fixed-price quotes, daily photo updates, clean job sites, and post-project walkthroughs. No surprises.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Ongoing Care</h3>
+                    <p>Touch-up visits, seasonal maintenance checks, and emergency response. We're here for the long haul.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="https://buy.stripe.com/3cI00c6TE5My1QKfqJ5J601" class="cta-button">Join the Founding Members — $97/mo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Works -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Why This Works</h2>
+            <div class="content-block">
+                <p>Traditional contractors make money by moving to the next job. We make money by keeping you happy long-term.</p>
+                <p><strong>That changes everything.</strong></p>
+                <p><strong>Their incentive:</strong> Get paid and disappear.<br>
+                <strong>Our incentive:</strong> Earn your membership every single month.</p>
+                <p>Which one do you think leads to better work?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">What You Get as a Founding Member</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>Immediate Benefits</h3>
+                    <ul class="checklist" style="margin: 20px 0 0 0;">
+                        <li>Priority scheduling for all projects</li>
+                        <li>10-15% discount on labor and materials</li>
+                        <li>Annual home inspection ($500 value, included)</li>
+                        <li>Direct project manager contact</li>
+                        <li>30-day satisfaction guarantee</li>
+                    </ul>
+                </div>
+                <div class="benefit-item">
+                    <h3>Long-Term Value</h3>
+                    <ul class="checklist" style="margin: 20px 0 0 0;">
+                        <li>Lifetime relationship (we're not going anywhere)</li>
+                        <li>Seasonal maintenance visits (2x per year)</li>
+                        <li>Touch-up services (minor fixes, no charge)</li>
+                        <li>Emergency response priority (same-day or next-day)</li>
+                    </ul>
+                </div>
+                <div class="benefit-item">
+                    <h3>Founding Member Exclusive</h3>
+                    <ul class="checklist" style="margin: 20px 0 0 0;">
+                        <li>Locked-in $97/month pricing (never goes up)</li>
+                        <li>Early access to new services</li>
+                        <li>Referral rewards (bring a friend, get a month free)</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="https://buy.stripe.com/3cI00c6TE5My1QKfqJ5J601" class="cta-button">Secure My Founding Member Spot — $97/mo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who This Is For -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Who This Is For</h2>
+            <div class="content-block">
+                <p><strong>This is for homeowners who:</strong></p>
+                <ul class="checklist">
+                    <li>Are tired of chasing contractors who won't call back</li>
+                    <li>Want predictable costs (not surprise invoices)</li>
+                    <li>Value their home and want it maintained correctly</li>
+                    <li>Prefer a long-term partner over one-off transactions</li>
+                </ul>
+                <p style="margin-top: 40px;"><strong>Not for:</strong></p>
+                <ul class="problem-list">
+                    <li>DIY-only homeowners (we're here to help, not replace your skills)</li>
+                    <li>People who only need one small job and never plan to maintain their home</li>
+                    <li>Bargain hunters looking for the absolute cheapest bid</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objections -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Common Questions Answered</h2>
+            <div class="content-block">
+                <p><strong>"I don't need work done right now."</strong></p>
+                <p>Perfect. The membership still gives you annual inspections and priority scheduling when you DO need something. Most members save $1,500+ in the first year just from catching small issues before they become expensive emergencies.</p>
+                
+                <p style="margin-top: 35px;"><strong>"What if I cancel?"</strong></p>
+                <p>You can cancel anytime. No contract lock-in. Month-to-month. But Founding Members keep their $97/month rate forever—if you rejoin later, you'll pay the standard rate (likely $147/month by then).</p>
+                
+                <p style="margin-top: 35px;"><strong>"How do I know you're reliable?"</strong></p>
+                <p>Because we're local, licensed, and staking our entire business on recurring memberships. If we disappear, we lose our entire revenue stream. Traditional contractors? They get paid upfront and ghost you. We only win if you stay happy month after month.</p>
+                
+                <p style="margin-top: 35px;"><strong>"What kind of projects do you do?"</strong></p>
+                <p>Kitchens, bathrooms, flooring, painting, tile work, outdoor spaces, custom carpentry, and general home maintenance. If it's a home improvement project, we handle it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">The Guarantee</h2>
+            <div class="content-block">
+                <p><strong>30-Day Money-Back Guarantee</strong></p>
+                <p>Join as a Founding Member. If within the first 30 days you don't see the value, we'll refund your membership fee. No questions asked.</p>
+                
+                <p style="margin-top: 35px;"><strong>Lifetime Satisfaction Promise</strong></p>
+                <p>Every project comes with our satisfaction guarantee. If something isn't right, we fix it. Period.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scarcity -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Only 100 Founding Members</h2>
+            <div class="content-block" style="text-align: center;">
+                <p>We're limiting Founding Memberships to <strong>100 homeowners</strong>.</p>
+                <p><strong>Why?</strong></p>
+                <p>Because we want to deliver white-glove service. We're not trying to scale to thousands of members. We're building a premium, local community of homeowners who value quality and reliability.</p>
+                <p style="margin-top: 35px;">Once we hit 100, Founding Member pricing ($97/month) closes forever.</p>
+                <p>New members after that? They'll pay $147/month.</p>
+                <span class="scarcity-badge">⚡ Limited to First 100 Only</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Placeholder -->
+    <section style="background: #34495e; padding: 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 80px 20px; text-align: center; color: white;">
+            <p style="font-size: 1.1rem; opacity: 0.8;">[Image Placeholder: High-quality before/after kitchen remodel or team photo]</p>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>The Choice</h2>
+            <div class="content-block" style="color: white; margin-bottom: 50px;">
+                <p><strong>Option 1:</strong> Keep dealing with contractors who disappear, surprise bills, and zero follow-up.</p>
+                <p><strong>Option 2:</strong> Join Sun Valley Remodel as a Founding Member and get priority service, transparent pricing, and a lifetime relationship for $97/month.</p>
+                <p style="margin-top: 40px;">One of these keeps your home in perfect condition.</p>
+                <p>The other keeps you stressed.</p>
+            </div>
+            <a href="https://buy.stripe.com/3cI00c6TE5My1QKfqJ5J601" class="cta-button" style="font-size: 1.5rem; padding: 25px 60px;">Join the Founding Members — $97/mo</a>
+            <p class="guarantee">
+                ✅ First 100 only<br>
+                ✅ Locked-in pricing forever<br>
+                ✅ Cancel anytime<br>
+                ✅ 30-day money-back guarantee
+            </p>
+            <div style="margin-top: 50px; font-size: 1.15rem;">
+                <p>Your home deserves better than one-off chaos.</p>
+                <p><strong>Let's build something that lasts.</strong></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
